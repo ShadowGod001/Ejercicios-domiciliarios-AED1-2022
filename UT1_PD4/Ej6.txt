@@ -1,0 +1,75 @@
+substring(int begIndex) - devuelve una nueva cadena que es una subcadena de esta cadena. La subcadena comienza con el carácter en el índice especificado y se extiende hasta el final de esta cadena. Y el índice de subcadena comienza desde 1 y no desde 0.
+
+substring(int begIndex, int endIndex) -  lo mismo que la forma sin el segundo argumento pero en esta variante la subcadena comienza con el índice begIndex y termina con el endIndex
+-------------------------------------
+split (String regex) - rompe una cadena cada vez que aparece el regex dado por parámetro. Devuelve un array con la cadena separada por ese parámetro.
+
+split(String regex, int limit) - dependiendo del segundo parámetro es cuantas veces va a partir la cadena.
+
+ej
+String str = "123.456";
+String[] arr = str.split(".");
+
+Salida --> arr = {"123","456"}
+-------------------------------------
+
+subsequence (int start, int end) - es básicamente lo mismo que un substring pero más genérico? 
+
+ej
+String str = "Hola perro";
+System.out.println(str.subSequence(0, 3));
+Salida --> Hola
+-------------------------------------
+
+trim - elimina espacios detrás y delante de la cadena, y devuelve una cadena sin los espacios.
+
+String str = "    hola "
+System.out.println(str.trim());
+Salida --> Hola
+-------------------------------------
+
+toLowerCase y toUpperCase - recibe una cadena y devuelve la misma cadena pero todo en mayúsculas o minúsculas.
+
+String str = "hola"
+System.out.println(str.toUpperCase());
+Salida --> HOLA
+-------------------------------------
+
+indexOf() - se le aplica a una cadena, de la forma str.IndexOf(String str or char, int fromIndex) fromIndex cuenta a partir de un índice determinado.
+
+String str = "hola"
+System.out.println(str.IndexOf("o"));
+Salida --> 1
+-------------------------------------
+
+lastIndexOf() - ídem del indexOf y misma sintaxis solo que este retorna la posición de la última aparición del caracter especificado.
+
+String str = "holao"
+System.out.println(str.lastIndexOf("o"));
+Salida --> 4
+-------------------------------------
+
+contains- boolean- devuelve v o f dependiendo de si el charSequence pasado por parámetro se encuentra o no en la cadena
+
+String str = "holao"
+System.out.println(str.contains("hol"));
+Salida --> true
+-------------------------------------
+
+replace - devuelve una cadena con todos los caracteres reemplazados por el caracter especificado (char)
+
+String str = "holaaaa"
+System.out.println(str.replace('a','e');
+Salida --> holeeee
+-------------------------------------
+
+replaceAll - ídem de lo anterior pero toma Strings en vez de chars, por lo que sirve para más cosas 
+
+String str = "holaaaa perro"
+System.out.println(str.replaceAll("hola",'was');
+Salida --> wasaaa perro
+
+SE PUEDE USAR PARA ELIMINAR ESPACIOS EN BLANCO str.replaceAll("\\s","") salida: holaaaaperro
+-------------------------------------
+
+replaceFirst - reemplaza la solo primera ocurrencia que coincide con el string pasado como argumento.

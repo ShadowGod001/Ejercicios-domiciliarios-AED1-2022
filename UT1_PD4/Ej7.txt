@@ -1,0 +1,67 @@
+La clase stringBuilder tiene las siguientes diferencias con los strings:
+
+-su tamaño y contenido pueden modificarse, a diferencia de los strings que son inmutables
+-debe crearse con un constructor no puede instanciar directamente una cadena como los strings
+
+Constructores: 
+
+-StringBuilder() -- StringBuilder s = new StringBuilder();	
+Construye un StringBuilder vacío y con una capacidad por defecto de 16 carácteres.
+
+-StringBuilder(int capacidad) -- StringBuilder s = new StringBuilder(55);
+Se le pasa la capacidad (número de caracteres) como argumento.
+
+-StringBuilder(String str) -- StringBuilder s = new StringBuilder("hola"); 
+Construye un StringBuilder en base al String que se le pasa como argumento.
+
+-------------------------------------
+
+setLength(int newLength) - void, reestablece el largo de la cadena StringBuilder.
+
+StringBuilder str = new StringBuilder("holaaaa");
+System.out.println(str.setLength(3);
+Salida --> hol
+-------------------------------------
+
+ensureCapacity(int minimunCapacity) - void, cambia los 16 caracteres por defecto a lo que se le pase como argumento.
+
+
+-------------------------------------
+
+append(boolean a) - toma un bollean como argumento y devuelve una cadena StringBuilder formada por la cadena original + el valor booleano
+
+StringBuilder str = new StringBuilder("holaaaa");
+System.out.println(str.append(true));
+Salida --> holaaaa true
+-------------------------------------
+
+insert(int posición, String string) - se inserta una cadena en la posición pasada como argumento.
+
+StringBuilder str = new StringBuilder("holaaaa");
+System.out.println(str.insert(1,"00"));
+Salida --> h00olaaaa
+-------------------------------------
+
+delete(int start, int end) - remueve los caracteres comenzando en el inicio y terminando en el final pasado como argumento
+
+StringBuilder str = new StringBuilder("holaaaa");
+System.out.println(str.delete(4,6));
+Salida --> hola
+-------------------------------------
+
+deleteCharAt (int index) - devuelve la cadena sin el char eliminado
+
+StringBuilder str = new StringBuilder("holaaaa");
+System.out.println(str.deleteCharAt(4));
+Salida --> holaaa
+-------------------------------------
+
+reverse() - devuelve la cadena desde atras hacia delante
+
+
+StringBuilder str = new StringBuilder("holaaaa");
+System.out.println(str.reverse);
+Salida --> aaaloh
+-------------------------------------
+
+Ejercicios 8,9,10, y 11 están en el archivo StringMethods
